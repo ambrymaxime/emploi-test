@@ -1,0 +1,39 @@
+//? --- COMMENT HELLOCSE : Style du login et responsive
+@media screen and (max-width: 959px) {
+    .login-left {
+        width: 100% !important;
+
+    }
+
+    .login-right {
+        display: none;
+    }
+}
+
+.login-left {
+    width: 40%;
+    height: 100vh;
+    background-color: $light;
+
+    .login-title {
+        margin-bottom: 20px;
+        color: $primary;
+        font-size: $font-size-base;
+        font-weight: bold;
+    }
+
+    .login-left-content {
+        padding: 0 35px;
+        margin: auto;
+    }
+}
+
+.login-right {
+    width: 60%;
+    height: 100vh;
+    background-color: $primary;
+    background-color: #212b32;
+    background-image: linear-gradient(#004660, rgba(0, 70, 96, 0)), url(https://www.hellocse.fr/images/background-co-2.png);
+    background-position: center;
+    background-size: cover;
+}

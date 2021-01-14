@@ -54,7 +54,13 @@ Route::group(['middleware' => ['auth', 'activated', 'activity', 'checkblocked']]
 Route::group(['middleware' => ['auth', 'activated', 'activity', 'twostep', 'checkblocked']], function () {
 
     //  Homepage Route - Redirect based on user role is in controller.
-    Route::get('/home', ['as' => 'public.home',   'uses' => 'App\Http\Controllers\UserController@index']);
+    //? --- COMMENT HELLOCSE : Création de routes liées au projet
+    Route::get('/home', ['as' => 'home',   'uses' => 'App\Http\Controllers\StarsController@index']);
+    Route::get('/stars', ['as' => 'stars',   'uses' => 'App\Http\Controllers\StarsController@show']);
+    
+    Route::post('/starAdd', ['as' => 'starAdd',   'uses' => 'App\Http\Controllers\StarsController@store']);
+    Route::post('/starEdit', ['as' => 'starEdit',   'uses' => 'App\Http\Controllers\StarsController@update']);
+    Route::post('/starRemove', ['as' => 'starRemove',   'uses' => 'App\Http\Controllers\StarsController@destroy']);
 
     // Show users profile - viewable by other users.
     Route::get('profile/{username}', [
@@ -79,6 +85,9 @@ Route::group(['middleware' => ['auth', 'activated', 'currentUser', 'activity', '
             ],
         ]
     );
+
+    Route::post('/getAllArchives', 'App\Http\Controllers\ArchivesController@getAllArchives');
+
     Route::put('profile/{username}/updateUserAccount', [
         'as'   => '{username}',
         'uses' => 'App\Http\Controllers\ProfilesController@updateUserAccount',

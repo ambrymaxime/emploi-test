@@ -22,6 +22,13 @@
         {{-- Fonts --}}
         @yield('template_linked_fonts')
 
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.10/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.10/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.10/dist/js/uikit-icons.min.js"></script>
+
         {{-- Styles --}}
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 
@@ -55,10 +62,11 @@
     </head>
     <body>
         <div id="app">
+            @if(Route::currentRouteName() != 'login' && Route::currentRouteName() != 'welcome' && Route::currentRouteName() != 'stars')
+                @include('partials.nav')
+            @endif()
 
-            @include('partials.nav')
-
-            <main class="py-4">
+            <main>
 
                 <div class="container">
                     <div class="row">
@@ -76,10 +84,6 @@
 
         {{-- Scripts --}}
         <script src="{{ mix('/js/app.js') }}"></script>
-
-        @if(config('settings.googleMapsAPIStatus'))
-            {!! HTML::script('//maps.googleapis.com/maps/api/js?key='.config("settings.googleMapsAPIKey").'&libraries=places&dummy=.js', array('type' => 'text/javascript')) !!}
-        @endif
 
         @yield('footer_scripts')
 

@@ -17,7 +17,8 @@ $brand-danger: #bf5329;
 $text-color: #636b6f;
 
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
+$font-family-sans-serif: "Raleway",
+sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -39,8 +40,7 @@ $lg-desktop: 1200px;
 $num-of-classes: 5;
 $directions: ('top', 'bottom', 'left', 'right');
 $types: ('margin', 'padding');
-$queries: (
-    $mq-tiny: 'xxs',
+$queries: ($mq-tiny: 'xxs',
     $phone: 'xs',
     $tablet: 'sm',
     $desktop: 'md',
@@ -57,3 +57,34 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels / Cards
 $panel-default-heading-bg: $white;
+
+
+//? --- COMMENT HELLOCSE : Création de variable pour mieux gérer une éventuelle future refonte
+$primary: #158ebd;
+$secondary: #004660;
+$contrast: #f18824;
+
+$white: #ffffff;
+$light: #f8f8fa;
+$grey: #F6F6F6;
+$dark: #1a1a1a;
+$black: #000000;
+
+$success: #2ab27b;
+$danger: #d83f3f;
+$warning: #d86f3f;
+
+$darkenPrimary: darken($primary, 10%);
+$darkenSecondary: darken($secondary, 10%);
+$darkenContrast: darken($contrast, 10%);
+
+$darkerPrimary: darken($primary, 30%);
+$darkerSecondary: darken($secondary, 30%);
+$darkerContrast: darken($contrast, 30%);
+
+
+$lightenPrimary: lighten($primary, 10%);
+$lightenSecondary: lighten($secondary, 10%);
+$lightenContrast: lighten($contrast, 10%);
+
+$menuHeight: 60px;

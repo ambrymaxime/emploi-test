@@ -1,75 +1,60 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+{{-- //? --- COMMENT HELLOCSE : Login avec traduction et illustration --}}
+<div uk-grid uk-height-viewport>
+    <div class="uk-flex uk-flex-middle login-left">
+        <div class="uk-text-left login-left-content">
+            <h1 class="uk-text-left">
+                {{ trans('titles.login') }}
+            </h1>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-4">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('auth.forgot') }}
-                                </a>
-                            </div>
-                        </div>
-
-                        <p class="text-center mb-3">
-                            Or Login with
-                        </p>
-
-                        @include('partials.socials-icons')
-
-                    </form>
+                <div class="form-group">
+                    <label class="uk-width-1-1" for="email">{{ __('E-Mail Address') }}</label>
+                    <div>
+                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                        @if ($errors->has('email'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label class="uk-width-1-1" for="password">{{ __('Password') }}</label>
+                    <div>
+                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                        @if ($errors->has('password'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <button type="submit" class="uk-button background-contrast text-light">
+                            {{ __('Login') }}
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="uk-flex uk-flex-middle login-right">
+        <div class="uk-text-center uk-width-1-1">
+            {{-- <img src="https://www.hellocse.fr/images/all-mockups-home.png" alt="Login" width="55%"> --}}
+            <h1 class="text-light uk-margin-top">
+               Créateur de satisfaction.
+            </h1>
+            <p class="text-light">
+                Billetterie, outils de gestion et de communication pour CE, CSE & PME
+            </p>
         </div>
     </div>
 </div>

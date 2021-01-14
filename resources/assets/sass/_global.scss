@@ -1,0 +1,99 @@
+// Background
+.background-primary {
+    background-color: $primary;
+}
+
+.background-secondary {
+    background-color: $secondary;
+}
+
+.background-contrast {
+    background-color: $contrast;
+}
+
+.background-light {
+    background-color: $light;
+}
+
+.background-dark {
+    background-color: $dark;
+}
+
+.background-white {
+    background-color: $white;
+}
+
+.background-danger {
+    background-color: $danger;
+}
+
+.background-success {
+    background-color: $success;
+}
+
+// Text
+.text-primary {
+    color: $primary;
+}
+
+.text-secondary {
+    color: $secondary;
+}
+
+.text-contrast {
+    color: $contrast;
+}
+
+.text-light {
+    color: $light;
+}
+
+.text-dark {
+    color: $dark;
+}
+
+.text-danger {
+    color: $danger;
+}
+
+.text-success {
+    color: $success;
+}
+
+.text-warning {
+    color: $warning;
+}
+
+// Hover
+.hover-primary {
+    &:hover {
+        background-color: $darkenPrimary;
+    }
+}
+
+.hover-secondary {
+    &:hover {
+        background-color: $darkenSecondary;
+    }
+}
+
+.hover-contrast {
+    &:hover {
+        background-color: $darkenContrast;
+    }
+}
+
+// Errors
+.field-danger {
+    border: 1px solid $danger;
+    background-color: lighten($danger, 40%);
+}
+
+// Border
+.radius-20 {
+    border-radius: 20px;
+}
+
+.radius-25 {
+    border-radius: 25px;
+}

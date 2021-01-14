@@ -19,8 +19,11 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+//? --- COMMENT HELLOCSE : Déclaration de mon component
+Vue.component('home', require('./pages/home.js').default);
+Vue.component('stars', require('./pages/stars.js').default);
 Vue.component('users-count', require('./components/UsersCount.vue').default);
+Vue.component('star', require('./components/Star.vue').default);
 
 const app = new Vue({
     el: '#app'
