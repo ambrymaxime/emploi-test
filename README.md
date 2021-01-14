@@ -1,9 +1,8 @@
+![](files/hellocse.gif)
+
 # Réalisation d'un projet pour HelloCSE
-
-## Phase de réflexion
-
 ## Création
-##### Étape 1 : Éstimation du temps et réflexion
+#### Étape 1 : Éstimation du temps et réflexion
 Je commence à estimer la charge de travail, et en profite pour me faire un idée de la structure de DB, les fonctionnalités nécessaire et un UX/UI adapté. 
 
 Estimation : 2 jours
@@ -20,7 +19,7 @@ Je décide de partir sur un projet GitHub offrant déjà un système d'inscripti
 - Il est inutile de réinventer la route, beaucoup de fonctionnalités fonctionnant très bien existent déjà, je n'aurais pas à le refaire
 - Il est rare de créer un projet "from scratch", même avec un framework, autant en profiter pour me plonger dans un projet que je ne connais pas et m'y adapter
 
-##### Étape 2 : Mise en place et installation du projet
+#### Étape 2 : Mise en place et installation du projet
 Après avoir créé un projet et modifié certains éléments qui ne changeront plus, je le versionning afin de pouvoir avoir un suivi de mon avancement par la suite et créé une branche de dev pour développer dessus. Étant seul, je ne fait pas une autre branche liée au ticket car pas nécessaire dans ce cas.
 
 ## Améliorations envisagée
@@ -32,10 +31,20 @@ Après avoir créé un projet et modifié certains éléments qui ne changeront 
 
 ## Instructions d'installation
 
+Remarque : 
+Dans le dossier "files" contient les ressources du projet en cas de problème d'instalation :
+- Le ZIP du projet
+- La DB au format .sql
+- Le GIF du rendu final
+
 Version : 
 
 - Laravel : 8.22.0
 - Node : v14.15.4
+
+Identifiants : 
+
+- user@user.com / password
 
 Installation : 
 
@@ -65,4 +74,3 @@ php artisan vendor:publish --tag=laravel2step
 12. Lancez le serveur `php artisan serve`
 13. Compilez ensuite le front : `npm install`
 14. Compilez ensuite le front : `npm run dev` ou `npm run watch`
-
