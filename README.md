@@ -2,8 +2,8 @@
 
 # Réalisation d'un projet pour HelloCSE
 ## Création
-#### Étape 1 : Éstimation du temps et réflexion
-Je commence à estimer la charge de travail, et en profite pour me faire un idée de la structure de DB, les fonctionnalités nécessaire et un UX/UI adapté. 
+#### Étape 1 : Estimation du temps et réflexion
+Je commence à estimer la charge de travail, et en profite pour me faire une idée de la structure de DB, les fonctionnalités nécessaire et un UX/UI adapté. 
 
 Estimation : 2 jours
 
@@ -13,14 +13,14 @@ Découpage : Jour 1
 
 Découpage : Jour 2
 - Création du backoffice : traitement des données avec VueJS et traitement des erreurs
-- Création de la visualtion : stylisation de la page, responsive et vérification du dev
+- Création de la visualisation : stylisation de la page, responsive et vérification du dev
 
-Je décide de partir sur un projet GitHub offrant déjà un système d'inscription / connnexion, notamment pour 2 raisons : 
+Je décide de partir sur un projet GitHub offrant déjà un système d'inscription / connexion, notamment pour 2 raisons : 
 - Il est inutile de réinventer la route, beaucoup de fonctionnalités fonctionnant très bien existent déjà, je n'aurais pas à le refaire
 - Il est rare de créer un projet "from scratch", même avec un framework, autant en profiter pour me plonger dans un projet que je ne connais pas et m'y adapter
 
 #### Étape 2 : Mise en place et installation du projet
-Après avoir créé un projet et modifié certains éléments qui ne changeront plus, je le versionning afin de pouvoir avoir un suivi de mon avancement par la suite et créé une branche de dev pour développer dessus. Étant seul, je ne fait pas une autre branche liée au ticket car pas nécessaire dans ce cas.
+Après avoir créé un projet et modifié certains éléments qui ne changeront plus, je le versionning afin de pouvoir avoir un suivi de mon avancement par la suite et créé une branche de dev pour développer dessus. Étant seul, je ne fais pas une autre branche liée au ticket car pas nécessaire dans ce cas.
 
 ## Améliorations envisagée
   * Mieux gérer le nommage, notamment : firstName VS first_name
@@ -32,7 +32,7 @@ Après avoir créé un projet et modifié certains éléments qui ne changeront 
 ## Instructions d'installation
 
 Remarque : 
-Dans le dossier "files" contient les ressources du projet en cas de problème d'instalation :
+Dans le dossier "files" contient les ressources du projet en cas de problème d'installation :
 - Le ZIP du projet
 - La DB au format .sql
 - Le GIF du rendu final
@@ -49,7 +49,7 @@ Identifiants :
 Installation : 
 
 1. Exécuter `git clone https://github.com/ambrymaxime/emploi-test.git hellocse_test`
-2. Créer un base de donnée MySQL nommée "hellocse_test"
+2. Créer une base de donnée MySQL nommée "hellocse_test"
 3. Créer un fichier d'environnement : `cp .env.example .env` et modifier les optino de DB
 4. Configurer le fichier `.env`
 ```
@@ -61,7 +61,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 5. Exécuter `composer update` depuis la base du projet
-6. Exéctuer ensuite :
+6. Exécuter ensuite :
 ```bash
 php artisan vendor:publish --tag=laravelroles &&
 php artisan vendor:publish --tag=laravel2step
