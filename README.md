@@ -37,6 +37,8 @@ Dans le dossier "files" contient les ressources du projet en cas de problème d'
 - La DB au format .sql
 - Le GIF du rendu final
 
+Les commentaires les plus pertinents contiennent "COMMENT HELLOCSE" pour simplifier les recherches
+
 Version : 
 
 - Laravel : 8.22.0
